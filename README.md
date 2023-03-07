@@ -13,12 +13,10 @@ Enter this commands:
 
 -f "docker-compose.yml" up -d --build                                                //this  will run docker 
 
-docker cp taskDB.sql e16-spring-boot-activity-dbpostgresql-1:/tmp/taskDB.sql         //copy the backup file for database
+run the script using this command
 
-docker exec -it e16-spring-boot-activity-dbpostgresql-1 bash                         //acces psql command line
-
-pg_restore -U postgres -d taskDB /tmp/taskDB.sql                                    //restore backup file
-
+chmod +x start.sh
+./start.sh 
 
 
 
