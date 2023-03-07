@@ -4,13 +4,19 @@ http://localhost:8080/home is the root url
 
 How to run this application:
 
-1. Clone this repository
-2. Install Docker and Docker Compose 
+
+ Clone this repository
+
+Install Docker and Docker Compose 
+
 Enter this commands:
 
 -f "docker-compose.yml" up -d --build                                                //this  will run docker 
+
 docker cp taskDB.sql e16-spring-boot-activity-dbpostgresql-1:/tmp/taskDB.sql         //copy the backup file for database
+
 docker exec -it e16-spring-boot-activity-dbpostgresql-1 bash                         //acces psql command line
+
 pg_restore -U postgres -d taskDB /tmp/backup.file                                    //restore backup file
 
 
