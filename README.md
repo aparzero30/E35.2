@@ -16,12 +16,6 @@ Enter this commands:
 run the script using this command
 
 
-Run this on command on WSL Commandline:
-
-chmod +x start.sh
-
-./start.sh 
-
 
 
         
