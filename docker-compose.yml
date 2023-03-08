@@ -4,6 +4,7 @@ services:
     container_name: app-springboot-postgresql
     image: e17
     build: ./
+    command: ./start.sh
     ports:
       - "8080:8080"
     depends_on:
