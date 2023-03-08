@@ -14,13 +14,15 @@ public class Task {
     @GeneratedValue
     @jakarta.persistence.Id
 
-    private Integer taskId;
 
+    @Column(name="task_id")
+    private Integer taskId;
+    @Column(name="title")
     private String title;
 
-
+    @Column(name="description")
     private String description;
-
+    @Column(name="completed")
     private String completed;
 
 

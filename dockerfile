@@ -1,8 +1,8 @@
-# FROM openjdk:17-jdk-alpine
-# ARG JAR_FILE=target/*.jar
-# EXPOSE  8080
-# ADD target/task-docker.jar task-docker.jar
-# ENTRYPOINT ["java","-jar","/task-docker.jar"]
+ FROM openjdk:17-jdk-alpine
+ ARG JAR_FILE=target/*.jar
+ EXPOSE  8080
+ ADD target/task-docker.jar task-docker.jar
+ ENTRYPOINT ["java","-jar","/task-docker.jar"]
 
 
 
@@ -28,13 +28,13 @@
 # ENTRYPOINT ["sh", "/start.sh", "java", "-jar", "/task-docker.jar"]
 
 
-FROM openjdk:17-jdk-alpine
-ARG JAR_FILE=target/*.jar
-COPY start.sh start.sh
-COPY taskDB.sql /tmp/taskDB.sql
-ADD target/task-docker.jar task-docker.jar
-RUN apk add --no-cache postgresql-client
-ENTRYPOINT ["sh", "/start.sh", "java", "-jar", "/task-docker.jar"]
+#FROM openjdk:17-jdk-alpine
+#ARG JAR_FILE=target/*.jar
+#COPY start.sh start.sh
+#COPY taskDB.sql /tmp/taskDB.sql
+#ADD target/task-docker.jar task-docker.jar
+#RUN apk add --no-cache postgresql-client
+#ENTRYPOINT ["sh", "/start.sh", "java", "-jar", "/task-docker.jar"]
 
 
 
