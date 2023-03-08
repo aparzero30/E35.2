@@ -13,7 +13,7 @@ Enter this commands:
 
 -f "docker-compose.yml" up -d --build                                                //this  will run docker 
 
-run the script using this command
+
 
 
 
